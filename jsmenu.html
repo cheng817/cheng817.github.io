@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的作品集</title>
+    <style>
+        ul{
+            margin: 0 ;
+            padding: 0;
+            list-style: none;
+        }
+        body{
+            font-size:18px;
+            font-family: "微软雅黑",Aharoni;
+        }
+        .nav{
+            width: 300px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 0 10px 20px;
+        }
+        .nav h3{
+            text-align: center;
+            color: #1a7ca4;
+            line-height: 20px;;
+        }
+        .nav ul li{
+            width: 180px;
+            line-height: 35px;
+            margin: 0 10px;
+        }
+        .nav ul li a{
+            display: block;
+            width: 180px;
+            height: 35px;
+            line-height: 35px;
+            color: #05b1fa;
+            border-radius: 5px;
+            text-decoration:none;
+        }
+        .nav ul li a:hover{
+            background-color: #00c4c8;
+            color: #fff;
+            font-weight: bold;
+            transition:all 1s; padding-left:30px;
+        }
+        .nav ul li span{ color: #666; padding-right: 10px;}
+        .nav ul li ul{ display: none;}
+        .nav ul li ul li{ float: none; margin-left: 40px;}
+    </style>
+    <script>
+        window.onload=function(){
+            var aLi= document.getElementById('m-nav').getElementsByTagName('li');
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].onmouseover=function() {
+                    this.getElementsByTagName("ul")[0].style.display= "block";
+                };
+                aLi[i].onmouseout=function() {
+                    this.getElementsByTagName("ul")[0].style.display= "none";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+   <div class="nav">
+       <h3>我的学习路</h3>
+       <ul id="m-nav">
+           <li>
+               <a href="#"><span>1.</span>js之图片切换效果</a>
+               <ul>
+                   <li><a href="pic/pic-dome10.html" target="_blank">图片轮播</a></li>
+                   <li><a href="pic/pic-dome1.html" target="_blank">图片切换之数组嵌入1</a></li>
+                   <li><a href="pic/pic-dome2.html" target="_blank">图片切换之数组嵌入2</a></li>
+               </ul>
+           </li>
+           <li>
+               <a href="#"><span>2.</span>js之运动效果</a>
+               <ul>
+                   <li><a href="pic/pic-dome6.html" target="_blank">延时提示框</a></li>
+                   <li><a href="pic/pic-dome8.html" target="_blank">收缩侧边栏</a></li>
+                   <li><a href="pic/pic-dome9.html" target="_blank">拖拽和吸附</a></li>
+                   <li><a href="pic/pic-index2.html" target="_blank">淡入淡出</a></li>
+
+               </ul>
+           </li>
+           <li>
+               <a href="#"><span>3.</span>js之获取时间</a>
+               <ul>
+                   <li><a href="pic/pic-dome4.html" target="_blank">数码时钟</a></li>
+                   <li><a href="pic/pic-dome5.html" target="_blank">简易日历</a></li>
+               </ul>
+           </li>
+           <li>
+               <a href="#"><span>4.</span>js之选项卡和正则</a>
+               <ul>
+                   <li><a href="pic/pic-dome3.html" target="_blank">选项卡</a></li>
+                   <li><a href="pic/pic-dome7.html" target="_blank">正则之验证邮箱</a></li>
+                   <li><a href="pic/iphone.html" target="_blank">模拟聊天框</a></li>
+               </ul>
+           </li>
+       </ul>
+   </div>
+</body>
+</html>
