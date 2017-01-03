@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li,p,a{  margin: 0;  padding: 0;}
+li{ list-style: none;}
+a{ text-decoration: none; color: #404040;}
+body{
+    font-size: 12px;
+    font-family: 微软雅黑,新宋体, Aharoni;
+}
+#top{
+    width: 100%;
+}
+.top_tt{  width: 100%; background-color: #e5e5e5;}
+.top_ff{ width: 100%; background-color: #fff;}
+
+.top_t{
+    width: 1110px;
+    margin: 0 auto;
+    position: relative;
+    line-height: 34px;
+    height: 34px;
+}
+.top_l{
+    position: absolute;
+    left: 0;
+}
+.top_l a{
+    background: url("../images/about_03.jpg")no-repeat left;
+    padding-left: 20px;
+    margin-right: 20px;
+}
+.top_l span{
+    background: url("../images/about_05.jpg")no-repeat left;
+    padding-left: 20px;
+}
+.top_r{
+    position: absolute;
+    right: 0;
+}
+.top_r span{
+    background: url("../images/about_07.jpg")no-repeat left;
+    padding-left: 20px;
+}
+.top_r a{
+    background: url("../images/about_09.jpg")no-repeat right;
+   padding: 5px 0 5px 5px;
+    margin-left: 75px;
+    display: inline-block;
+    width: 84px;
+    line-height: 20px;
+    background-color: #3f3f3f;
+    color: #fff;
+}
+.top_l a:hover,.top_r a:hover{
+    background-color: #0e3460;
+    color: #b7cb46;
+}
+
+.top_f{
+    width: 1110px;
+    margin: 0 auto;
+    height: 90px;
+    position: relative;
+}
+.top_f_l{
+    padding: 13px 10px 13px 0;
+}
+.top_f_r{
+    position: absolute;
+    right: 0;
+    top:13px;
+}
+.top_f_r span{
+    display: inline-block;
+    padding-left: 45px;
+}
+.span1{
+    background: url("../images/about_18.jpg")no-repeat left;
+    width: 112px;
+    color: #05b1fa;
+}
+.span2{
+    background: url("../images/about_20.jpg")no-repeat left;
+    width: 96px;
+    color: #05b1fa;
+}
+.span3{
+    background: url("../images/about_22.jpg")no-repeat left;
+    width: 144px;
+    color: #05b1fa;
+}
+.span4{
+    background: url("../images/about_24.jpg")no-repeat left;
+    width: 120px;
+    color: #75bd29;
+}
+.span4 h2{
+    font-size: 30px;
+}
+
+#nav{
+    width: 100%;
+    height: 38px;
+    background-color: #016d9b;
+}
+#nav ul{
+    width: 1100px;
+    margin: 0 auto;
+}
+#nav li{
+    float: left;
+}
+#nav a{
+    display: inline-block;
+    line-height: 38px;
+    font-size: 18px;
+    text-align: center;
+    padding: 0 30px;
+    color: #fff;
+}
+.li_a{
+    background: url("../images/about_32.jpg")no-repeat 2px;
+}
+#nav a:hover{
+    background-color: #77bc2b;
+}
+#top_img img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#senter{
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+.senter_t{
+    margin-bottom: 40px;
+}
+.senter_t p{
+    color: #006d98;
+    font-size: 20px;
+    font-weight: bold;
+}
+.senter_t span{
+    position: absolute;
+    right: 0;
+    top:0;
+    background: url("../images/about_38.jpg")no-repeat left;
+    padding-left: 20px;
+    line-height: 25px;
+    font-size: 10px;
+}
+.senter_t a{
+    color: #006d98;
+}
+.senter_m{
+    width: 240px;
+    border: 1px solid #d6d6d6;
+    padding:10px;
+    float: left;
+    margin: 17px 17px 0 0;
+}
+.senter_m_1{
+    margin-right: 0;
+}
+.senter_m h3{
+    line-height: 50px;
+    font-size: 20px;
+}
+.senter_m p{
+    margin-bottom: 15px;
+}
+.senter_m p a{
+    font-size: 14px;
+    color: #c4c4c4;
+    line-height: 20px;
+}
+.senter_m a:hover{
+    color: #0e3460;
+}
+
+.clear:after{
+    content: '.';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+
+.senter_f{
+    margin: 50px 0;
+    height: 100px;
+    background-color: #016d9b;
+}
+.senter_f p{
+    display: inline-block;
+    color: #fff;
+    line-height: 20px;
+    font-size: 12px;
+
+}
+.senter_f span{
+    color: #fff;
+    font-size: 20px;
+
+}
+.sp1,.sp2,.sp3,.sp4{
+    float: left;
+    margin-left: 30px;
+}
+.sp1{
+    background: url("../../医院/images/about_77.jpg")no-repeat left;
+    padding:30px 20px 30px 75px;
+}
+.sp2{
+    background: url("../images/about_79.jpg")no-repeat left;
+    padding:30px 20px 30px 75px;
+}
+.sp3{
+    background: url("../images/about_81.jpg")no-repeat left;
+    padding:30px 20px 30px 75px;
+}
+.sp4{
+    background: url("../images/about_83.jpg")no-repeat left;
+    padding:20px 20px 20px 75px;
+}
+
+#footer{
+    width: 100%;
+    height: 432px;
+    background: url("../images/about1_03.jpg");
+    position: relative;
+}
+.footer_t{
+    margin: 0 auto;
+    width: 1100px;
+}
+.footer_t a{
+    line-height: 39px;
+    font-size: 14px;
+    color: #fff;
+    padding: 0 10px;
+}
+.footer_t a:hover,.footer_m a:hover{
+    color: #b7cb46;
+}
+
+.footer_m{
+    margin: 40px auto;
+    width: 1100px;
+}
+.footer_m_l{
+    color: #fff;
+    margin-left: 10px;
+}
+.footer_m_l li{
+    margin: 5px;
+}
+.li1{
+    background: url("../images/about_89.jpg") no-repeat left;
+}
+.li2{
+    background: url("../images/about_92-33.jpg") no-repeat left;
+}
+.li3{
+    background: url("../images/about_94.jpg") no-repeat left;
+}
+.li4{
+    background: url("../images/about_96.jpg") no-repeat left;
+}
+.footer_m_l a{
+    display: inline-block;
+    color: #fff;
+    line-height: 35px;
+    font-size: 12px;
+    padding-left: 45px;
+}
+.footer_m_m{
+    position: absolute;
+    top:80px;
+    left: 400px;
+    color: #fff;
+}
+.footer_m_mt{
+    margin-bottom: 30px;
+}
+.footer_m_mt p{
+    padding-left: 40px;
+    font-size: 12px;
+    line-height: 25px;
+}
+.footer_m_mt a{
+    color: #8dbe2f;
+}
+.footer_m_mt a:hover{
+    color: #3300FF;
+}
+.footer_m_mf p{
+    padding-left: 90px;
+    margin-top: 10px;
+    background: url("../images/about_98.jpg")no-repeat left;
+    color: #afcfde;
+    font-size: 12px;
+}
+.footer_m_mf span{
+    color: #fff;
+    font-size: 30px;
+}
+
+.footer_m_r{
+    position: absolute;
+    top:80px;
+    right: 130px;
+}
+.footer_m_rt{
+    width: 226px;
+    height: 132px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.footer_m_rt p{
+    color: #98bed3;
+    font-size: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    line-height: 16px;
+    background: url("../images/about_92.jpg")no-repeat top;
+    padding-top: 70px;
+}
+.footer_f{
+    position: absolute;
+    bottom: 20px;
+    left: 400px;
+}
+.footer_f p{
+    text-align: center;
+    color: #c9dae2;
+    line-height: 20px;
+    font-size: 10px;
+}
