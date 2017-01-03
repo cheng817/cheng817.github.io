@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则</title>
+    <style>
+        div{width: 300px; margin: 100px auto;}
+    </style>
+    <script>
+        window.onload = function(){
+            var oTex = document.getElementById('tex');
+            var oBut = document.getElementById('but');
+
+            oBut.onclick = function(){
+                var re = /^\w+@[a-z0-9]+\.[a-z]+$/i;
+                if(re.test(oTex.value)==false) {
+                    alert('你输入的邮箱有误')
+                }
+            };
+        };
+
+    </script>
+</head>
+<body>
+    <div>
+        <p>
+            请输入邮箱验证：
+        </p>
+        <input id="tex" type="text">
+        <input id="but" type="button" value="提交">
+    </div>
+</body>
+
+</html>
