@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片切换</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        #logo{
+            width: 600px;
+            height: 550px;
+            margin: 50px auto;
+            position: relative;
+            font-size: 40px;
+            text-align: center;
+        }
+        img{
+            width: 400px;
+            height: 550px;
+            float: left;
+        }
+        span,p{
+            width: 400px;
+            position: absolute;
+            height: 50px;
+            line-height: 50px;
+            background-color: #303030;
+            filter: alpha(opacity:40);
+            opacity: 0.4;
+            color: #fff;
+        }
+        span{
+            display: block;
+            top:0;
+        }
+        p{
+            bottom: 0;
+        }
+        ul{
+            position: absolute;
+            left: 405px;
+            top: 0;
+        }
+        li{
+            list-style: none;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 5px;
+            background-color: #0d84c8;
+        }
+    </style>
+</head>
+<script>
+    window.onload = function(){
+        var oDiv = document.getElementById('logo');
+        var oImg = document.getElementById('img');
+        var oSpan = document.getElementById('span');
+        var oP = document.getElementById('p');
+        var oUl = document.getElementById('ul');
+        var aLi = oUl.getElementsByTagName('li');
+        var arrUrl =['images/images/a1.png','images/images/a2.png','images/images/a3.png','images/images/a4.png'];
+        var arrText =['鹰眼','狐狸','妖精','机器人'];
+        var num =0;
+
+        for(var i=0;i<arrText.length;i++){
+            oUl.innerHTML+='<li></li>'
+        }
+          oImg.src = arrUrl[num];
+          oSpan.innerHTML = 1 + num + '/' + arrText.length;
+          oP.innerHTML = arrText[num];
+          aLi[num].className='qq';
+
+        for(var i=0;i<aLi.length;i++) {
+            aLi[i].index = i;
+            aLi[i].onclick = function () {
+                oImg.src = arrUrl[this.index];
+                oSpan.innerHTML = 1 + this.index + '/' + arrText.length;
+                oP.innerHTML = arrText[this.index];
+
+                for (var i = 0; i < aLi.length; i++) {
+                    aLi[i].className = '';
+                }
+                aLi[this.index].className = 'qq';
+            }
+        }
+    }
+
+</script>
+<body>
+<div id="logo">
+    <img id="img" >
+    <span id="span"></span>
+    <p id="p"></p>
+   <ul id="ul"></ul>
+</div>
+</body>
+</html>
