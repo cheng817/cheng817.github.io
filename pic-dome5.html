@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日历</title>
+    <style>
+        #div1{
+            border: 30px solid #ccc;
+            width: 400px;
+            height: 750px;
+            margin: 0 auto;
+            margin-top: 50px;
+            border-radius: 30px;
+        }
+        h1{
+            text-align: center;
+        }
+        ul{
+            height: 500px;
+        }
+        li{
+            padding: 10px 40px;
+            background-color: #3f3e3e;
+            color: #0d84c8;
+            float: left;
+            margin: 2px;
+            list-style: none;
+            border: 1px solid #3f3e3e;
+        }
+        .lss{
+            padding: 10px 40px;
+            background-color: #fff;
+            color: #000;
+            float: left;
+            margin: 2px;
+            list-style: none;
+            border: 1px solid #3f3e3e;
+        }
+        .div2{
+            width: 380px;
+            text-align: center;
+            margin-top: 60px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var oDiv = document.getElementById('div1');
+            var aLi = oDiv.getElementsByTagName('li');
+            var oDiv2 = oDiv.getElementsByTagName('div')[0];
+            var arr = [
+                '快过年了，准备好好玩',
+                '是擦三次四次似的撒旦的',
+                '骨灰级的活动是vdsfss ',
+                '如果方便vfxfffg 归属感',
+                '发生大火幅度很大dvd是',
+                '根深蒂固工会经费不好的',
+                '呵呵地方很多不好的后果',
+                '是东莞佛山东莞是不过是个',
+                '三国杀身上得到更好是个',
+                '但是不是吧能帮到你',
+                '是德国帅哥帅哥帅哥',
+                '火狐电话电话的变化的'
+            ];
+
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].index = i;
+                aLi[i].onclick = function(){
+                    for(var i=0;i<aLi.length;i++){
+                        aLi[i].className = '';
+                    }
+                    this.className = 'lss';
+                    oDiv2.innerHTML = '<h2>'+(this.index+1)+'月活动</h2><p>'+arr[this.index]+'</p>';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <h1>粗制日历</h1>
+        <ul>
+            <li class="lss"><h2>1</h2><p>JAN</p></li>
+            <li><h2>2</h2><p>FER</p></li>
+            <li><h2>3</h2><p>MAR</p></li>
+            <li><h2>4</h2><p>APR</p></li>
+            <li><h2>5</h2><p>MAY</p></li>
+            <li><h2>6</h2><p>JUN</p></li>
+            <li><h2>7</h2><p>JUL</p></li>
+            <li><h2>8</h2><p>AUG</p></li>
+            <li><h2>9</h2><p>SEP</p></li>
+            <li><h2>10</h2><p>CCT</p></li>
+            <li><h2>11</h2><p>NOV</p></li>
+            <li><h2>12</h2><p>DEC</p></li>
+        </ul>
+        <div class="div2">
+            <h2>1月活动</h2>
+            <p>快过年了，准备好好玩</p>
+        </div>
+    </div>
+
+</body>
+</html>
