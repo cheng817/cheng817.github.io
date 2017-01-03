@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>众汇国际教育-index</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script>
+    window.onload=function(){
+        var oCont= document.getElementById('cont');
+        var oPic= document.getElementById('pic');
+        var oPre= document.getElementById('pre');
+        var oNext= document.getElementById('next');
+        var num=0;
+        var timer=null;
+        var hasStarted=false;
+        start();
+        oCont.onmouseover=function(){
+            stop();
+        };
+        oCont.onmouseout=function(){
+            start();
+        };
+        oNext.onclick=function(){
+            next();
+        };
+        oPre.onclick=function(){
+            pre();
+        };
+        function next(){
+            num++;
+            num=num%5;
+            oPic.style.marginLeft=-335*num+'px';
+        }
+        function pre(){
+            num--;
+            num=(num+5)%5;
+            oPic.style.marginLeft=-335*num+'px';
+        }
+        function start(){
+            if(!hasStarted){
+                hasStarted=true;
+                timer=setInterval(function(){
+                    next();
+                },2000);
+            }
+        }
+        function stop(){
+            clearInterval(timer);
+            hasStarted = false;
+        }
+    }
+</script>
+</head>
+
+<body>
+    <div id="head">
+       <div class="top">
+          <img src="images/index1_03.png">
+          <h2>全国服务热线：</h2>
+          <p>0755-23771320</p>
+       </div>
+       <div class="nav">
+       <ul>
+           <li><a href="huizhong.html" class="tab">首页</a></li>
+           <li><a href="#">关于众汇</a>
+                <ul>
+                  <li><a href="pic-index5.html">众汇简介</a></li>
+                  <li><a href="pic-index6.html">众汇优势</a></li>
+                  <li><a href="pic-index7.html">众汇俱乐部</a></li>
+               </ul>
+           </li>
+           <li><a href="#">学生项目</a>
+               <ul>
+                  <li><a href="pic-index8.html">中小学生项目</a></li>
+                  <li><a href="#">大学生项目</a></li>
+               </ul>
+           </li>
+           <li><a href="#">成人项目</a>
+               <ul>
+                  <li><a href="#">企业家项目</a></li>
+                  <li><a href="#">户外教育项目</a></li>
+               </ul>
+           </li>
+           <li><a href="#">新闻中心</a></li>
+           <li><a href="#">学员风采</a></li>
+       </ul>
+       </div>
+    </div>
+    <div id="wrap">
+        <div class="banner">
+
+           </div>
+        <div class="content">
+          <div class="titlebox">
+              <h3>精品项目</h3>
+              <p>Quality project</p>
+          </div>
+          <div class="projectbox" id="cont">
+            <div class="p_left p_left1">
+                <a  href="javascript:;" id="pre">
+                </a>
+            </div>
+            <div class="p_middle">
+                <div class="probox" id="pic">
+                    <ul>
+                        <li><a href="#"><img src="images/index1_13.jpg">暑期美国研习之行</a></li>
+                        <li><a href="#"><img src="images/index1_15.jpg">圆梦英伦</a></li>
+                        <li><a href="#"><img src="images/index1_17.jpg">户外素质拓展教育</a></li>
+                        <li><a href="#"><img src="images/index1_13.jpg">暑期美国研习之行</a></li>
+                        <li><a href="#"><img src="images/index1_15.jpg">圆梦英伦</a></li>
+                        <li><a href="#"><img src="images/index1_17.jpg">户外素质拓展教育</a></li>
+                        <li><a href="#"><img src="images/index1_13.jpg">暑期美国研习之行</a></li>
+                        <li><a href="#"><img src="images/index1_15.jpg">圆梦英伦</a></li>
+                        <li><a href="#"><img src="images/index1_17.jpg">户外素质拓展教育</a></li>
+                        <li><a href="#"><img src="images/index1_13.jpg">暑期美国研习之行</a></li>
+                        <li><a href="#"><img src="images/index1_15.jpg">圆梦英伦</a></li>
+                        <li><a href="#"><img src="images/index1_17.jpg">户外素质拓展教育</a></li>
+                      </ul>
+                </div>
+            </div>
+            <div class="p_right p_right1">
+                <a  href="javascript:;" id="next">
+                </a>
+            </div>
+          </div>
+          <div class="button">
+              <a href="#">查看更多项目 &gt;&gt;</a>
+          </div>
+          <div class="titlebox">
+              <h3>众汇资讯</h3>
+              <p>NEWS</p>
+          </div>
+        </div>
+        <div class="newsbox">
+          <div class="news">
+              <div class="box">
+                  <div class="newstitle">
+                      <a href="#">
+                      <h3>07<span>05.2016</span></h3>
+                      <h2>【相约暑期】青少年领袖是这样炼成的？</h2>
+                      <p>奥特邦户外教育，2016台湾环岛科考交夏令营！如果你是7-15岁青少年家长，奥特邦愿意与您一起见证孩子成长的辉煌！如果你是7-15岁青少年学子，奥特邦愿意与你一起经历人生的……</p>
+                      </a>
+                  </div>
+                  <ul>
+                      <li><a href="#"><span>2016/08/18</span>【青少年研学营】你是真正的王者？</a></li>
+                      <li><a href="#"><span>2016/08/18</span>英国神秘中学教育专家在举行青岛游学讲课</a></li>
+                      <li><a href="#"><span>2016/08/18</span>游学及留学生深受国际人才交流大会欢迎</a></li>
+                      <li><a href="#"><span>2016/08/18</span>十二“兽首”惊现深圳</a></li>
+                      <li><a href="#"><span>2016/08/18</span>将悲伤转化成隐形的翅膀</a></li>
+                      <li><a href="#"><span>2016/08/18</span>将悲伤转化成隐形的翅膀</a></li>
+                  </ul>
+              </div>
+              <img src="images/index1_34.jpg" alt="">
+          </div>
+          <div class="button"><a href="#">查看更多项目 &gt;&gt;</a></div>
+       </div>
+    </div>
+    <div id="bottom">
+       <div class="footer">
+          <div class="b_left">
+              <div class="menu"><a href="#">首页</a>｜<a href="#">关于众汇</a>｜<a href="#">学生项目</a>｜<a href="#">成人项目</a>｜<a href="#">新闻中心</a>｜<a href="#">学员风采</a></div>
+              <p>地址：深圳市龙华新区光浩国际中心1202室&nbsp;&nbsp;&nbsp;&nbsp;QQ服务专员：2271455496<br>粤ICP备16027854-1；Copyright©2016深圳市众汇国际教育科技开发有限公司</p>
+          </div>
+          <div class="b_middle"><img src="images/index1_38.jpg"></div>
+          <h4 class="b_right">
+             客服热线：
+             <p>(0755)23771320</p>
+          </h4>
+       </div>
+    </div>
+</body>
+</html>
