@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iphone</title>
+    <link rel="stylesheet" href="css/iphone.css">
+    <style>
+        *{ padding: 0; margin: 0;}
+        #iphone{
+            width: 1000px;
+            height: 700px;
+            background: url("images/iphone.jpg") no-repeat;
+            position: relative;
+            margin: 0 auto;
+        }
+        .top{
+            width: 221px;
+            height: 350px;
+            border-bottom: 1px solid #ccc;
+            background-color: #f5f5f5;
+            position: absolute;
+            left: 365px;
+            top: 117px;
+            padding: 10px;
+            word-break: break-all;
+        }
+        #bottom_zuo{
+            position: absolute;
+            left: 370px;
+            top:495px;
+            border: none;
+        }
+        .bottom_zhong input{
+            width: 135px;
+            height: 32px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            position: absolute;
+            left: 411px;
+            top: 496px;
+        }
+        .bottom_you input{
+            position: absolute;
+            left: 554px;
+            top: 502px;
+            font-size: 22px;
+        }
+    </style>
+    <script>
+        window.onload= function() {
+            var oQqq = document.getElementById('bottom_zuo');
+            var oTop = document.getElementById('top');
+            var oImg = document.getElementById('img');
+            var oText = document.getElementById('tex');
+            var oBut = document.getElementById('but');
+            var arrUrl=['images/icon1.jpg','images/icon2.jpg'];
+            var num=0;
+            var onOff=true;
+            function i(){
+                oImg.src=arrUrl[num];
+            }
+            i();
+            oBut.onclick = function () {
+                if (oText.value == '') {
+                    alert("请输入想说的");
+                } else {
+                    oTop.innerHTML += oQqq.innerHTML + oText.value+'<br />';
+                    oText.value = '';
+                }
+            };
+            oImg.onclick = function (){
+                if(onOff){
+                    oImg.src=arrUrl[1];
+                    onOff= false;
+                }else {
+                    oImg.src=arrUrl[0];
+                    onOff= true;
+                }
+            };
+        }
+    </script>
+</head>
+<body>
+<div id="iphone">
+    <div class="top" id="top">
+    </div>
+    <div class="bottom">
+        <div id="bottom_zuo">
+            <img id="img">
+        </div>
+        <div class="bottom_zhong">
+            <input id="tex" type="text" value="" />
+        </div>
+        <div class="bottom_you">
+            <input id="but" type="button" value="发送" />
+        </div>
+    </div>
+</div>
+</body>
+</html>
