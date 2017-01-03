@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font-size:16px;
+            font-family: "微软雅黑", Aharoni;
+        }
+        ul,li{ margin: 0; padding: 0;}
+        li{ list-style: none;}
+        a{ text-decoration:none; }
+        .nav{
+            width: 300px;
+            height: 120px;
+            border: 1px solid #ccc;
+            margin: 150px auto;
+        }
+        .nav-top li{
+            width: 40px;
+            float: left;
+            height: 22px;
+            line-height: 22px;
+            text-align: center;
+            margin: 0 8px;
+        }
+        .nav-top{
+            margin: 10px 0;
+            height: 25px;
+        }
+        .nav-top a:hover{
+            font-weight: bold;
+            color: #F22D00;
+        }
+        .on{
+            border-bottom: 2px solid #F40;
+            font-weight: bold;
+            color: #F22D00;
+        }
+        .nav-bot>ul{
+            height: 60px;
+            margin: 10px;
+            display: none;
+        }
+        .nav-bot>ul:first-child{ display: block;}
+        .nav-bot>ul li{
+            float: left;
+            width: 140px;
+            margin-bottom: 5px;
+            height: 25px;
+            line-height: 25px;
+            overflow: hidden;
+        }
+        .on{ color: #F40;}
+    </style>
+    <script>
+        window.onload=function(){
+            var oUl=document.getElementById('ul');
+            var aLi=oUl.getElementsByTagName('li');
+            var oShow= document.getElementById('show');
+            var aUl=oShow.getElementsByTagName('ul');
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].index=i;
+                aLi[i].onmouseover=function(){
+                    for(var i=0;i<aLi.length;i++){
+                        aLi[i].className='';
+                        aUl[i].style.display='none';
+                    }
+                    this.className='on';
+                    aUl[this.index].style.display='block';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="nav">
+    <div class="nav-top">
+        <ul id="ul">
+            <li class="on"><a href="#">公告</a></li>
+            <li><a href="#">规则</a></li>
+            <li><a href="#">论坛</a></li>
+            <li><a href="#">安全</a></li>
+            <li><a href="#">公益</a></li>
+        </ul>
+    </div>
+    <div id="show" class="nav-bot">
+        <ul>
+            <li><a href="#">阿里首席平台治理官</a>
+            </li>
+            <li><a href="#">郑俊芳当选"质量人物"</a>
+            </li>
+            <li><a href="#">阿里招人工智能训练师</a></li>
+            <li><a href="#">第二届阿里年货节启动</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">不正当谋利规则变更</a>
+            </li>
+            <li><a href="#">淘宝亲宝贝市场管理规范</a>
+            </li>
+            <li><a href="#">淘宝价格发布规范变更</a></li>
+            <li><a href="#">店铺相关规则调整变更</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">双十二开始报名啦</a>
+            </li>
+            <li><a href="#">淘宝论坛招募志愿者</a>
+            </li>
+            <li><a href="#">名师一刻-5个亿的秘密</a></li>
+            <li><a href="#">十八纸颠覆家具想象</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">首次揭秘打假特战队—</a>
+            </li>
+            <li><a href="#">—《刀尖上的舞者》</a>
+            </li>
+            <li><a href="#">差点我都信了！</a></li>
+            <li><a href="#">重交“保证金”？</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">大众评审乡村医院开建</a>
+            </li>
+            <li><a href="#">闲鱼公益上线招募NGO</a>
+            </li>
+            <li><a href="#">阿里与残联出助残政策</a></li>
+            <li><a href="#">公益宝贝卖家发票索取</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
