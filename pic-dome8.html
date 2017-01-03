@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运动之收缩侧边栏</title>
+    <style>
+        #div1{
+            width: 150px;
+            height: 300px;
+            background-color: #ccc;
+            position: absolute;
+            font-size: 18px;
+            left: -150px;
+        }
+        #div1 span{
+            padding: 10px;
+            width: 20px;
+            position: absolute;
+            right: -40px;
+            top: 90px;
+            background-color: #05b1fa;
+            color: #fff;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var oDiv = document.getElementById('div1');
+            oDiv.onmousemove = function () {
+                startMove(0);
+            };
+            oDiv.onmouseout = function(){
+                startMove(-150);
+            }
+        };
+        var timer = null;
+        function startMove(iTarget){
+            var oDiv = document.getElementById('div1');
+            clearInterval(timer);
+            timer = setInterval(function(){
+                var speed =0;
+                if(oDiv.offsetLeft>iTarget){
+                    speed =-10;
+                }else {
+                    speed =10;
+                }
+                if(oDiv.offsetLeft==iTarget){
+                    clearInterval(timer);
+                }else {
+                    oDiv.style.left=oDiv.offsetLeft+speed+'px';
+                }
+            },30)
+        }
+    </script>
+</head>
+<body>
+  <div id="div1">
+      <span>点我分享到</span>
+  </div>
+</body>
+</html>
