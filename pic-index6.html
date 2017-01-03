@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>众汇国际教育-advantage</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script>
+    window.onload=function(){
+            var oCont= document.getElementById('cont');
+            var oPic= document.getElementById('pic');
+            var oPre= document.getElementById('pre');
+            var oNext= document.getElementById('next');
+            var num=0;
+            var timer=null;
+            var hasStarted=false;
+            start();
+            oCont.onmouseover=function(){
+                stop();
+            };
+            oCont.onmouseout=function(){
+                start();
+            };
+            oNext.onclick=function(){
+                next();
+            };
+            oPre.onclick=function(){
+                pre();
+            };
+            function next(){
+                num++;
+                num=num%5;
+                oPic.style.marginLeft=-190*num+'px';
+            }
+            function pre(){
+                num--;
+                num=(num+5)%5;
+                oPic.style.marginLeft=-190*num+'px';
+            }
+            function start(){
+                if(!hasStarted){
+                    hasStarted=true;
+                    timer=setInterval(function(){
+                        next();
+                    },2000);
+                }
+            }
+            function stop(){
+                clearInterval(timer);
+                hasStarted = false;
+            }
+        }
+</script>
+</head>
+<body>
+<div id="head">
+   <div class="top">
+      <img src="images/index1_03.png">
+      <h2>全国服务热线：</h2>
+      <p>0755-23771320</p>
+   </div>
+   <div class="nav">
+   <ul>
+       <li><a href="huizhong.html">首页</a></li>
+       <li><a href="#" class="tab">关于众汇</a>
+            <ul>
+              <li><a href="pic-index5.html">众汇简介</a></li>
+              <li><a href="pic-index6.html">众汇优势</a></li>
+              <li><a href="pic-index7.html">众汇俱乐部</a></li>
+           </ul>
+       </li>
+       <li><a href="#">学生项目</a>
+           <ul>
+              <li><a href="pic-index8.html">中小学生项目</a></li>
+              <li><a href="#">大学生项目</a></li>
+           </ul>
+       </li>
+       <li><a href="#">成人项目</a>
+           <ul>
+              <li><a href="#">企业家项目</a></li>
+              <li><a href="#">户外教育项目</a></li>
+           </ul>
+       </li>
+       <li><a href="#">新闻中心</a></li>
+       <li><a href="#">学员风采</a></li>
+   </ul>
+   </div>
+</div>
+<div id="wrap">
+    <div class="subcontent">
+        <img src="images/club_03.jpg" alt="">
+        <div class="subtitle">
+          <h2>SURPERIORITY<span>众汇优势</span></h2>
+          <div class="line"></div>
+        </div>
+        <h3>世界顶级名校教授资源</h3>
+        <p>众汇目前在全世界范围内拥有200多位名牌大学签约教授，包括美国常春藤名校哈佛大学、耶鲁大学、哥伦比亚大学、普林斯顿
+大学、宾夕法尼亚大学等，美国西海岸科技城的斯坦福大学、加州伯克利大学，以及英国的牛津大学、剑桥大学，香港大学、
+香港中文大学、台湾大学等。教授以商学院为主，辐射到工科、理科、人文社科等学院。授课教授均可以为学员颁发证书及推
+荐信，为中小学生出国体验留学生活，感受名校教授的互动式课堂，争取留学申请所需要的履历和推荐信，提供丰富的资源。</p>
+        <h3>考察企业和政府资源</h3>
+        <p>众汇曾接待的企事业单位和政府考察项目数百个，涉及各个行业，部分还需要安排政府官员接待，包括硅谷科技及风险投资企
+业——Google谷歌、Oracle甲骨文、Cisco思科、Microsoft微软、HP惠普、Intel英特尔、Apple苹果、IBM等；华尔街金融企业
+——Morgan Stanley摩根士丹利、JP Morgan 摩根大通、Goldman Sachs高盛、红杉基金、Boston波士顿咨询、UBS瑞士银行、
+Citibank花旗银行、NYSE纽约证券交易所；美国在线教育巨头企业——Coursera、Udacity、EDx、Minurva、Shmoop；法国
+奢侈品行业代表企业——LV、香奈儿、卡地亚、迪奥、爱马仕、花宫娜香水、酩悦香槟；德国制造业——奔驰、宝马、博世、
+西门子，以及台湾文创产业、意大利时尚行业、美国房地产行业等数百家企业。</p>
+        <h3>大中院校合作及交换生项目资源</h3>
+        <p>为了给更多的学生提供国外著名大学和中学的交换生、交流生、升学直通车项目，我们与耶鲁大学、伯克利大学、南加州大学、
+剑桥大学、美国普瑞特设计学院、纽约卡梅尔中学、纽约菲尔顿中心、优胜美地联合高中、美国圣约瑟夫学院等十余所学校实
+现官方合作项目，包括一年/一学期的交换生项目、课程学习项目、企业培训项目等，颁发学院或学校官方证书，同时还可根据
+客户需要拓展新的官方合作，建立中美友好合作学校关系、姊妹学校关系，为国际合作办学和教师互派学习，奠定坚实的基础。</p>
+        <h3>国内官方教育机构合作资源</h3>
+        <p>结合基础教育与国际视野拓展，中心多年来，联合中国高等教育学会语文教育组、中国发展战略学研究会智业战略专业委员会、
+全国青少年中华优秀传统文化素养展示活动组委会，以及中国青少年发展服务中心、全国“青少年走进科学世界”科普活动指
+导委员会办公室、中学生数理化学科能力展示活动组委会，举办不同形式的数理化海外游学活动，国学文化素养展示活动，和
+青少年风采展示活动。</p>
+         <div class="subtitle">
+          <h2>HONOR<span>众汇荣誉</span></h2>
+          <div class="line"></div>
+        </div>
+    
+    
+    </div>
+    <div class="projectbox honorbox" id="cont">
+         <div class="p_left p_left2">
+             <a href="javascript:;" id="pre">
+             </a>
+         </div>
+         <div class="p_middle">
+            <div class="probox" id="pic">
+            <ul>
+            <li><a href="#"><img src="images/advantage_03.jpg">2016年腾讯网授予众汇国际教育
+“2015年度中国著名品牌”</a></li>
+            <li><a href="#"><img src="images/advantage_03.jpg">2016年腾讯网授予众汇国际教育
+“2015年度中国著名品牌”</a></li>
+            <li><a href="#"><img src="images/advantage_03.jpg">2016年腾讯网授予众汇国际教育
+“2015年度中国著名品牌”</a></li>
+            <li><a href="#"><img src="images/advantage_03.jpg">2016年腾讯网授予众汇国际教育
+“2015年度中国著名品牌”</a></li>
+            <li><a href="#"><img src="images/advantage_03.jpg">2016年腾讯网授予众汇国际教育
+“2015年度中国著名品牌”</a></li>
+            <li><a href="#"><img src="images/advantage_03.jpg">2016年腾讯网授予众汇国际教育
+“2015年度中国著名品牌”</a></li>
+                <li><a href="#"><img src="images/advantage_03.jpg">2016年腾讯网授予众汇国际教育
+                    “2015年度中国著名品牌”</a></li>
+                <li><a href="#"><img src="images/advantage_03.jpg">2016年腾讯网授予众汇国际教育
+                    “2015年度中国著名品牌”</a></li>
+                <li><a href="#"><img src="images/advantage_03.jpg">2016年腾讯网授予众汇国际教育
+                    “2015年度中国著名品牌”</a></li>
+                <li><a href="#"><img src="images/advantage_03.jpg">2016年腾讯网授予众汇国际教育
+                    “2015年度中国著名品牌”</a></li>
+                <li><a href="#"><img src="images/advantage_03.jpg">2016年腾讯网授予众汇国际教育
+                    “2015年度中国著名品牌”</a></li>
+                <li><a href="#"><img src="images/advantage_03.jpg">2016年腾讯网授予众汇国际教育
+                    “2015年度中国著名品牌”</a></li>
+             </ul>
+            </div>
+         </div>
+         <div class="p_right p_right2">
+             <a href="javascript:;" id="next"></a>
+         </div>
+      </div>
+</div>
+<div id="bottom">
+   <div class="footer">
+      <div class="b_left">
+          <div class="menu"><a href="#">首页</a>｜<a href="#">关于众汇</a>｜<a href="#">学生项目</a>｜<a href="#">成人项目</a>｜<a href="#">新闻中心</a>｜<a href="#">学员风采</a></div>
+          <p>地址：深圳市龙华新区光浩国际中心1202室&nbsp;&nbsp;&nbsp;&nbsp;QQ服务专员：2271455496<br>粤ICP备16027854-1；Copyright©2016深圳市众汇国际教育科技开发有限公司</p>
+      </div>
+      <div class="b_middle"><img src="images/index1_38.jpg"></div>
+      <h4 class="b_right">
+         客服热线：
+         <p>(0755)23771320</p>
+      </h4>
+   </div>
+</div>
+</body>
+</html>
