@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>延时提示框</title>
+    <style>
+        div{
+            float: left;
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            line-height: 100px;
+        }
+        #div1{
+            width: 200px;
+            height: 300px;
+            background-color: #ccc;
+            margin-left: 350px;;
+        }
+        #div2{
+            width: 200px;
+            height: 100px;
+            background-color: #00c4c8;
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var oDiv1 = document.getElementById('div1');
+            var oDiv2 = document.getElementById('div2');
+            var time = null;
+            oDiv2.onmouseover = oDiv1.onmouseover = function(){
+                oDiv2.style.display = 'block';
+                clearInterval(time);
+            };
+            oDiv2.onmouseout =oDiv1.onmouseout = function(){
+                time = setInterval(function(){
+                    oDiv2.style.display = 'none';
+                },500);
+            };
+        };
+    </script>
+
+</head>
+<body>
+  <div id="div1">到这里来</div>
+  <div id="div2">我出来了</div>
+</body>
+</html>
