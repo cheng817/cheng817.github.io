@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运动之图片透明度变化</title>
+    <style>
+        #div1{
+            width: 300px;
+            height: 300px;
+            font-size: 200px;
+            line-height: 300px;
+            text-align: center;
+            background-color: #ff0000;
+            transform:rotate(135deg);
+            margin: 100px;
+            filter: alpha(opacity:30);
+            opacity: 0.3;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var oDiv = document.getElementById('div1');
+            oDiv.onmousemove = function(){
+                startMove(100)
+            };
+            oDiv.onmouseout = function(){
+                startMove(30)
+            }
+        };
+        var alpha =30;
+        var timer = null;
+        function startMove(iTarget){
+            var oDiv = document.getElementById('div1');
+            clearInterval(timer);
+            timer = setInterval(function(){
+                var speed = 0;
+                if(alpha<iTarget){
+                    speed = 2;
+                }else {
+                    speed = -2;
+                }
+                if(alpha==iTarget){
+                    clearInterval(timer);
+                }else {
+                    alpha+=speed;
+                    oDiv.style.filter = 'alpha(opacity='+alpha+')';
+                    oDiv.style.opacity = alpha/100;
+                }
+            },30)
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">
+        福
+    </div>
+</body>
+</html>
