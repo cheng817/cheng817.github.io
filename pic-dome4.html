@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数码时钟</title>
+</head>
+<style>
+    .time{
+        background-color: #fdfdfd;
+    }
+    .times{
+        width: 700px;
+        height: 200px;
+        margin: 100px auto;
+        font-size: 70px;
+        color: #8dbe2f;
+        background-color: #fdfdfd;
+    }
+</style>
+<script>
+    window.onload = function(){
+        var aImg = document.getElementsByTagName('img');
+        function toDou(n){
+            if(n<10){
+                return '0'+n;
+            }else {
+                return ''+n;
+            }
+        }
+        function tick() {
+            var oDate = new Date();
+            var str = toDou(oDate.getHours()) + toDou(oDate.getMinutes()) + toDou(oDate.getSeconds());
+
+            for (var i=0; i< aImg.length; i++) {
+                aImg[i].src = 'images/images/' + str.charAt(i) + '.png';
+            }
+        }
+        setInterval(tick,1000);
+        tick();
+    }
+</script>
+<body>
+  <div class="time">
+      <div class="times">
+          <img src="images/images/0.png" alt="">
+          <img src="images/images/0.png" alt="">
+          :
+          <img src="images/images/0.png" alt="">
+          <img src="images/images/0.png" alt="">
+          :
+          <img src="images/images/0.png" alt="">
+          <img src="images/images/0.png" alt="">
+      </div>
+  </div>
+</body>
+</html>
